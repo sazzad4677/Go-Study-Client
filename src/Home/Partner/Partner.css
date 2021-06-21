@@ -1,0 +1,4 @@
+.partner-container {
+  display: grid;
+  place-items: center;
+}

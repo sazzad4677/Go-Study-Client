@@ -1,0 +1,20 @@
+.main-container {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.header-text {
+  color: #29303c;
+  font-family: "khula", sans-serif;
+  font-weight: 700;
+  font-size: 54px;
+  text-decoration: underline;
+  text-decoration-color: #99b1f5;
+}
+.header-sub-text {
+  color: #686f7a;
+}
+.check-mark {
+  border: 1px solid red;
+  border-radius: 50%;
+}

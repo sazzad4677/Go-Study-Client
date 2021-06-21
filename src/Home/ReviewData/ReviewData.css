@@ -1,0 +1,44 @@
+.review {
+  border: 1px solid #ff1f59;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.review-card {
+  background-color: white;
+}
+
+.review-text {
+  color: #29303b;
+  font-size: 22px;
+  line-height: 38px;
+  margin: 0;
+  padding-bottom: 15px;
+}
+.reviewer {
+  width: 85%;
+  float: left;
+}
+.reviewer-name {
+  color: #29303b;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+.reviewer-degree {
+  color: #29303b;
+  font-size: 15px;
+  margin: 0;
+}
+.reviewer-image img {
+  width: 75px;
+  height: 75px;
+  border-radius: 100px;
+  margin-left: 35px;
+  object-fit: cover;
+  margin-top: -50px;
+}
+.quotes {
+  font-size: 30px;
+  color: #ff1f59;
+}

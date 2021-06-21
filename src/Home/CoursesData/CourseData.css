@@ -1,0 +1,8 @@
+.course-detail {
+  border-bottom: 1px solid rgb(235, 232, 232);
+}
+.price {
+  color: #415674;
+  font-size: 20px;
+  font-weight: bold;
+}
