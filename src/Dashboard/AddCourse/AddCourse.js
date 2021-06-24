@@ -11,7 +11,6 @@ const AddCourse = () => {
   const [imageSuccess, setImageSuccess] = useState({});
 
   const handelImageUpload = (event) => {
-    // console.log((event.target.pattern).status);
     const imageData = new FormData();
     imageData.set("key", "4c5b39315115b5add699e93840f098d7");
     imageData.append("image", event.target.files[0]);
@@ -44,7 +43,6 @@ const AddCourse = () => {
   const getData = (e) => {
     const data = { ...inputData };
     data[e.target.name] = e.target.value;
-    console.log(data);
     setInputData(data);
   };
   const handelSubmit = (e) => {
@@ -82,69 +80,69 @@ const AddCourse = () => {
       <Navbar />
       <div className="">
         <Sidebar />
-      <div className="ms-5 mt-5 col-md-8">
-        <div className="d-flex justify-content-end">
-          <div
-            style={{
-              backgroundColor: "white",
-              borderColor: "1px solid white",
-              borderRadius: "10px",
-            }}
-          >
-            <div className="col-md-12 mt-2 ms-2 position-relative">
-              <form className="row" onSubmit={handelSubmit}>
-                <div className="form-group col-md-4 mt-3 mb-3">
-                  <label className="brand-text">Add Course Title</label>
-                  <input
-                    name="courseTitle"
-                    type="text"
-                    className="form-control"
-                    placeholder="Enter Course Title"
-                    onChange={getData}
-                    required
-                  />
-                </div>
-                <div className="form-group col-md-3 mt-3 mb-3">
-                  <label className="brand-text">Course Price</label>
-                  <input
-                    name="price"
-                    type="number"
-                    className="form-control"
-                    placeholder="Enter Course Price"
-                    onChange={getData}
-                    required
-                  />
-                </div>
-                <div className="form-group col-md-4 mt-3 mb-3">
-                  <label className="brand-text">Upload Course Image</label>
-                  <input
-                    name="image"
-                    type="file"
-                    className="form-control"
-                    onChange={handelImageUpload}
-                    pattern="([^\\s]+(\\.(?i)(jpe?g|png|gif|bmp))$)"
-                    title="Upload a valid image file"
-                    required
-                  />
-                </div>
-                <p>{imageSuccess.message}</p>
-                <div>
-                  {imageSuccess.status && (
-                    <button
-                      type="submit"
-                      className="btn mb-3  brand-btn"
-                      style={{ width: "10%" }}
-                    >
-                      Submit
-                    </button>
-                  )}
-                  {<p> {status.message} </p>}
-                </div>
-              </form>
+        <div className="ms-5 mt-5 col-md-8">
+          <div className="d-flex justify-content-end">
+            <div
+              style={{
+                backgroundColor: "white",
+                borderColor: "1px solid white",
+                borderRadius: "10px",
+              }}
+            >
+              <div className="col-md-12 mt-2 ms-2 position-relative">
+                <form className="row" onSubmit={handelSubmit}>
+                  <div className="form-group col-md-4 mt-3 mb-3">
+                    <label className="brand-text">Add Course Title</label>
+                    <input
+                      name="courseTitle"
+                      type="text"
+                      className="form-control"
+                      placeholder="Enter Course Title"
+                      onChange={getData}
+                      required
+                    />
+                  </div>
+                  <div className="form-group col-md-3 mt-3 mb-3">
+                    <label className="brand-text">Course Price</label>
+                    <input
+                      name="price"
+                      type="number"
+                      className="form-control"
+                      placeholder="Enter Course Price"
+                      onChange={getData}
+                      required
+                    />
+                  </div>
+                  <div className="form-group col-md-4 mt-3 mb-3">
+                    <label className="brand-text">Upload Course Image</label>
+                    <input
+                      name="image"
+                      type="file"
+                      className="form-control"
+                      onChange={handelImageUpload}
+                      pattern="([^\\s]+(\\.(?i)(jpe?g|png|gif|bmp))$)"
+                      title="Upload a valid image file"
+                      required
+                    />
+                  </div>
+                  <p>{imageSuccess.message}</p>
+                  <div>
+                    {imageSuccess.status && (
+                      <button
+                        type="submit"
+                        className="btn mb-3  brand-btn"
+                        style={{ width: "10%" }}
+                      >
+                        Submit
+                      </button>
+                    )}
+                    {<p> {status.message} </p>}
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
   );

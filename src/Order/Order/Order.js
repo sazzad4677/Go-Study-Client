@@ -9,11 +9,9 @@ const Order = () => {
         height: "100vh",
       }}
     >
-      {/* <Navbar /> */}
       <h3 className="text-center mt-5">Ordered Course</h3>
       <div className="row">
         <div className="col-md-2">
-          {/* <Sidebar /> */}
         </div>
             <OrderData/>
       </div>

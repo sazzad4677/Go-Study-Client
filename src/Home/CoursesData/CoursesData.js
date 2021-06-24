@@ -4,12 +4,15 @@ import { Link } from "react-router-dom";
 import "./CourseData.css";
 
 const CoursesData = ({ course }) => {
-
   return (
     <div className="col-md-3">
       <div className="shadow p-3 mb-5 bg-body rounded">
         <div>
-          <img src={course.courseImage} className="img-fluid course-image" alt="" />
+          <img
+            src={course.courseImage}
+            className="img-fluid course-image"
+            alt=""
+          />
         </div>
         <div className="mt-2">
           <div className="d-flex ms-3">
@@ -40,8 +43,8 @@ const CoursesData = ({ course }) => {
             </span>
             <span className="price">${course.price}</span>
             <Link to={`/course/${course._id}`}>
-                    <button className="btn brand-btn">Add to cart</button>
-                  </Link>
+              <button className="btn brand-btn">Add to cart</button>
+            </Link>
           </div>
         </div>
       </div>

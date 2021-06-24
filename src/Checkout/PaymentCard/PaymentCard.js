@@ -25,7 +25,7 @@ const PaymentCard = ({ handelPayment }) => {
     } else {
       setPaymentError("");
       setPaymentSuccess(paymentMethod.id);
-      handelPayment(paymentMethod.id)
+      handelPayment(paymentMethod.id);
     }
   };
 
@@ -45,7 +45,9 @@ const PaymentCard = ({ handelPayment }) => {
       </div>
       <div>
         {paymentError && <p style={{ color: "red" }}>{paymentError}</p>}
-        {paymentSuccess && <p style={{ color: "green" }}>Your payment successfully completed</p>}
+        {paymentSuccess && (
+          <p style={{ color: "green" }}>Your payment successfully completed</p>
+        )}
       </div>
     </div>
   );

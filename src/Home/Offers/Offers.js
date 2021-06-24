@@ -27,7 +27,7 @@ const Offers = () => {
   return (
     <section className="container Offers-container">
       <div className="row mt-2">
-        {offersData.map((Offers,key) => (
+        {offersData.map((Offers, key) => (
           <OffersData Offers={Offers} key={key}></OffersData>
         ))}
       </div>

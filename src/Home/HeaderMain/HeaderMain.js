@@ -6,7 +6,7 @@ const HeaderMain = () => {
   return (
     <main
       className="main-container "
-      style={{ height: "870px", backgroundColor: "#F7F4F4"}}
+      style={{ height: "870px", backgroundColor: "#F7F4F4" }}
     >
       <div className="container">
         <div className="row">
@@ -20,19 +20,31 @@ const HeaderMain = () => {
             </p>
             <div className="input-group mt-5">
               <div>
-                <input type="search" id="form1" className="form-control" placeholder="What do you want to learn?" style={{width: "300px"}} />
+                <input
+                  type="search"
+                  id="form1"
+                  className="form-control"
+                  placeholder="What do you want to learn?"
+                  style={{ width: "300px" }}
+                />
               </div>
               <button type="button" className="btn brand-btn">
                 search
               </button>
             </div>
             <div className="d-flex mt-5">
-                <div className="me-2">
-                    <span> <FcCheckmark className="me-2"/> Get Certified</span>
-                </div>
-                <div>
-                    <span> <FcCheckmark className="me-2 ms-2"/> Gain Job-ready Skills</span>
-                </div>
+              <div className="me-2">
+                <span>
+                  {" "}
+                  <FcCheckmark className="me-2" /> Get Certified
+                </span>
+              </div>
+              <div>
+                <span>
+                  {" "}
+                  <FcCheckmark className="me-2 ms-2" /> Gain Job-ready Skills
+                </span>
+              </div>
             </div>
           </div>
           <div className="col-md-7">

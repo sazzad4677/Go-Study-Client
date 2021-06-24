@@ -9,12 +9,10 @@ const Checkout = () => {
   const { id } = useParams();
   const [loggedIn, setLoggedIn] = useContext(userContext);
   const [carts, setCart] = useState([]);
-  
-  // const []
   const [checkout, setCheckout] = useState(false);
   const { name, userEmail } = loggedIn;
-  const {courseTitle, price,email} = carts
-  const newCart = { courseTitle, price,email }
+  const { courseTitle, price, email } = carts;
+  const newCart = { courseTitle, price, email };
   const userInfo = { name, userEmail };
   let ts = Date.now();
 
@@ -29,9 +27,11 @@ const Checkout = () => {
       .then((res) => res.json())
       .then((data) => setCart(data[0]));
   }, [id]);
-  const payment = () => {setCheckout(true)}
+  const payment = () => {
+    setCheckout(true);
+  };
   const handleOrder = (paymentId) => {
-    const newOrder = { ...userInfo, ...newCart, orderDate,paymentId };
+    const newOrder = { ...userInfo, ...newCart, orderDate, paymentId };
     fetch("https://murmuring-sands-78848.herokuapp.com/addOrder/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -39,7 +39,6 @@ const Checkout = () => {
     })
       .then((response) => response.json())
       .then((data) => console.log(data));
-    // console.log(newOrder);
   };
   return (
     <div>
@@ -61,39 +60,42 @@ const Checkout = () => {
             className="col-md-8 ms-5 p-5"
             style={{ backgroundColor: "white" }}
           >
-            {!checkout && <table
-              className="table table-borderless "
-              
-            >
-              <thead>
-                <tr>
-                  <th scope="col">Course Name</th>
-                  <th scope="col">Course Price</th>
-                  <th scope="col">Manage</th>
-                </tr>
-              </thead>
-              <tbody>
-              
-                  <tr >
+            {!checkout && (
+              <table className="table table-borderless ">
+                <thead>
+                  <tr>
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Course Price</th>
+                    <th scope="col">Manage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
                     <td>{courseTitle}</td>
                     <td>{price}</td>
                     <td>
-                      <button
-                        onClick={payment}
-                        className="btn brand-btn"
-                      >
+                      <button onClick={payment} className="btn brand-btn">
                         Checkout
                       </button>
                     </td>
                   </tr>
-         
-              </tbody>
-            </table>}
-            {checkout && <div className="col-md-5">
-              <h6 className="mb-4">Please enter your card details</h6>
-              <Payment handelPayment={handleOrder} />
-              <button className="btn brand-btn mt-2" onClick={()=> {setCheckout(false)}} >Go Back</button>
-            </div>}
+                </tbody>
+              </table>
+            )}
+            {checkout && (
+              <div className="col-md-5">
+                <h6 className="mb-4">Please enter your card details</h6>
+                <Payment handelPayment={handleOrder} />
+                <button
+                  className="btn brand-btn mt-2"
+                  onClick={() => {
+                    setCheckout(false);
+                  }}
+                >
+                  Go Back
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>

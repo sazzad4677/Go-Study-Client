@@ -4,24 +4,20 @@ import Navbar from "../../Shared/Navbar/Navbar";
 import Sidebar from "../Sidebar/Sidebar";
 
 const AddReview = () => {
-
-  const [loggedIn, setLoggedIn] = useContext(userContext);   
+  const [loggedIn, setLoggedIn] = useContext(userContext);
   const [inputData, setInputData] = useState({
-    title:"",
-    review:"",
+    title: "",
+    review: "",
     name: loggedIn.name,
     email: loggedIn.userEmail,
-    photo: loggedIn.photoURL
+    photo: loggedIn.photoURL,
   });
-  const [success, setSuccess] = useState({})
-  // const [name, userEmail,photoURL] = loggedIn
-  // const newUser = [name, userEmail,photoURL]
-
+  const [success, setSuccess] = useState({});
   const getData = (e) => {
     const data = { ...inputData };
     data[e.target.name] = e.target.value;
     setInputData(data);
-    console.log(data)
+    console.log(data);
   };
   const handelSubmit = (e) => {
     fetch("https://murmuring-sands-78848.herokuapp.com/addReview", {
@@ -29,11 +25,11 @@ const AddReview = () => {
       headers: {
         "content-Type": "application/json",
       },
-      body: JSON.stringify(inputData)
+      body: JSON.stringify(inputData),
     })
       .then((response) => response.json())
       .then((data) => {
-        setSuccess(data)
+        setSuccess(data);
       });
     e.preventDefault();
   };
@@ -78,7 +74,7 @@ const AddReview = () => {
               <button type="submit" className="btn brand-btn mt-2">
                 Submit
               </button>
-              {success.length > 0&& <p>Your review has been submitted</p>}
+              {success.length > 0 && <p>Your review has been submitted</p>}
             </div>
           </form>
         </div>

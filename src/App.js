@@ -27,7 +27,7 @@ function App() {
             <Dashboard />
           </PrivateRoute>
           <PrivateRoute path="/addCourse/">
-            <AddCourse/>
+            <AddCourse />
           </PrivateRoute>
           <PrivateRoute path="/addTeacher">
             <AddTeacher />
@@ -48,7 +48,7 @@ function App() {
             <Login />
           </Route>
           <PrivateRoute path="/course/:id">
-              <Checkout />
+            <Checkout />
           </PrivateRoute>
           <Route exact path="/">
             <Home />

@@ -16,7 +16,7 @@ const OrderData = () => {
           <tr>
             <th scope="col">Course Name</th>
             <th scope="col">Course Price</th>
-            <th scope="col">Teacher Email</th>
+            <th scope="col">FTeacher Email</th>
             <th scope="col">Student Name</th>
             <th scope="col">Student Email</th>
             <th scope="col">Payment ID</th>
@@ -32,14 +32,6 @@ const OrderData = () => {
               <td>{order.name}</td>
               <td>{order.userEmail}</td>
               <td>{order.paymentId}</td>
-              {/* <td>
-              {loggedIn.admin && (
-                <select className="form-select" aria-label="Default select example">
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              )}</td> */}
             </tr>
           ))}
         </tbody>
