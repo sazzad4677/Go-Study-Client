@@ -17,7 +17,6 @@
 }
 .reviewer {
   width: 85%;
-  float: left;
 }
 .reviewer-name {
   color: #29303b;
@@ -28,7 +27,7 @@
 .reviewer-degree {
   color: #29303b;
   font-size: 15px;
-  margin: 0;
+  /* margin: 0; */
 }
 .reviewer-image img {
   width: 75px;
@@ -36,7 +35,7 @@
   border-radius: 100px;
   margin-left: 35px;
   object-fit: cover;
-  margin-top: -50px;
+  margin-top: -40px;
 }
 .quotes {
   font-size: 30px;

@@ -1,0 +1,39 @@
+.footer {
+  background-color: #101c32;
+  height: 500px;
+  z-index: -1;
+}
+.footer-topBox {
+  background-color: #f8faff;
+  font-weight: 50px;
+  height: 300px;
+  width: 100%;
+  border: 1px solid #f8faff;
+  border-radius: 10px;
+  margin-top: -150px;
+}
+.footer-topbox-text {
+  font-size: "40px";
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bold;
+  color: #29303c;
+}
+.footer-bottom {
+  border-bottom: 1px solid #343e51;
+}
+.footer-icon {
+  font-size: 25px;
+}
+.footer-icon-text {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 23px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.footer-head-text {
+  color: white;
+}
+.footer-text {
+  color: #a3abb8;
+  text-decoration: none !important;
+}

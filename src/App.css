@@ -8,10 +8,14 @@
   font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
   color: #29303c;
+  text-decoration: none;
 }
 .brand-btn {
   font-family: "Nunito Sans", sans-serif;
   font-weight: bold;
   color: #fafafa;
   background-color: #ff1f59;
+}
+.brand-color {
+  color: #ff1f59;
 }
