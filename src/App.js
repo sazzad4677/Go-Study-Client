@@ -1,18 +1,19 @@
 import { createContext, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
-import Checkout from "./Checkout/Checkout/Checkout";
-import AddAdmin from "./Dashboard/AddAdmin/AddAdmin";
-import AddCourse from "./Dashboard/AddCourse/AddCourse";
-import AddReview from "./Dashboard/AddReview/AddReview";
-import AddTeacher from "./Dashboard/AddTeacher/AddTeacher";
-import Dashboard from "./Dashboard/Dashboard/Dashboard";
-import ManageCourses from "./Dashboard/ManageCourses/ManageCourses";
-import Home from "./Home/Home/Home";
-import Login from "./Login/Login";
-import NoMatch from "./NoMatch/NoMatch";
-import Order from "./Order/Order/Order";
-import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import Home from "./components//Home/Home/Home";
+import Checkout from "./components/Checkout/Checkout/Checkout";
+import AddAdmin from "./components/Dashboard/AddAdmin/AddAdmin";
+import AddCourse from "./components/Dashboard/AddCourse/AddCourse";
+import AddReview from "./components/Dashboard/AddReview/AddReview";
+import AddTeacher from "./components/Dashboard/AddTeacher/AddTeacher";
+import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
+import ManageCourses from "./components/Dashboard/ManageCourses/ManageCourses";
+import Login from "./components/Login/Login";
+import NoMatch from "./components/NoMatch/NoMatch";
+import Order from "./components/Order/Order/Order";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+
 export const userContext = createContext();
 function App() {
   const [loggedIn, setLoggedIn] = useState({});
@@ -21,7 +22,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/home">
-            <Home />
+            <Home/>
           </Route>
           <PrivateRoute path="/dashboard">
             <Dashboard />
