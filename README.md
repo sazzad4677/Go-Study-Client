@@ -8,7 +8,7 @@ This is a student and teacher demonstration project where the instructor may dev
 
 ## For Frontend code
 
-[Frontend](https://github.com/Porgramming-Hero-web-course/complete-website-client-sazzad4677)
+[Frontend](https://github.com/sazzad4677/Go-Study-Client)
 
 ## For Backend code
 
